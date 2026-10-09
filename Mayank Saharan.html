@@ -1,0 +1,238 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Mayank Saharan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout: one narrow column; a label rail on the left at desktop widths, stacked on phones.
+   Hero carries a recession-flow curve, the subject of his published research. */
+:root {
+  --bg: #F2F6F6;
+  --fg: #14211F;
+  --muted: #566968;
+  --rule: #CBD9D8;
+  --accent: #0A6B73;
+  --accent-soft: #D7E9EA;
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1517; --fg: #E3ECEB; --muted: #8FA6A5; --rule: #25393A;
+    --accent: #5CC3C9; --accent-soft: #14292B; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1517; --fg: #E3ECEB; --muted: #8FA6A5; --rule: #25393A;
+  --accent: #5CC3C9; --accent-soft: #14292B; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-inline: 1.25rem;
+  padding-block: 3.5rem 4rem;
+}
+.wrap { max-width: 46rem; margin-inline: auto; display: flex; flex-direction: column; gap: 3.5rem; }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.hero { display: flex; flex-direction: column; gap: 1.5rem; }
+.eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.2rem, 11vw, 6rem); line-height: 0.95; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.lede { font-size: 1.15rem; max-width: 34rem; margin: 0; color: var(--fg); text-wrap: pretty; }
+.curve { width: 100%; max-width: 100%; height: auto; display: block; }
+.curve .axis { stroke: var(--rule); stroke-width: 1; fill: none; }
+.curve .line { stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; }
+.curve .area { fill: var(--accent-soft); stroke: none; }
+.curve text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; font-family: var(--mono); font-size: 0.9rem; }
+.contact .addr { overflow-wrap: anywhere; min-width: 0; }
+.copy { font: inherit; font-size: 0.8rem; color: var(--fg); background: none; border: 1px solid var(--rule); border-radius: 3px; padding: 0.25rem 0.65rem; cursor: pointer; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+
+section { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0.75rem 2rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+h2 { font-family: var(--mono); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0.35rem 0 0; }
+.items { display: flex; flex-direction: column; gap: 2rem; min-width: 0; }
+.item { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+.item h3 { font-size: 1.1rem; font-weight: 600; margin: 0; line-height: 1.35; }
+.meta { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin: 0; }
+.item p { margin: 0; text-wrap: pretty; }
+.item ul { margin: 0.25rem 0 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.item li::marker { color: var(--accent); }
+
+.skills { display: flex; flex-direction: column; gap: 0.9rem; margin: 0; min-width: 0; }
+.skills div { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 0.25rem 1rem; }
+.skills dt { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); padding-top: 0.2rem; }
+.skills dd { margin: 0; }
+
+footer { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+
+@media (max-width: 40rem) {
+  body { padding-block: 2.5rem 3rem; }
+  .wrap { gap: 2.75rem; }
+  section { grid-template-columns: minmax(0, 1fr); }
+  h2 { margin: 0; }
+  .skills div { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .copy { transition: border-color 0.15s, color 0.15s; }
+}
+</style>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Data science &amp; business analytics · Hyderabad, India</p>
+    <h1>Mayank Saharan</h1>
+    <p class="lede">I work with data to find what does not fit the pattern. Today that means fraud and risk analysis at Amazon. Before that, it meant rivers, signals and robots.</p>
+
+    <svg class="curve" id="curve" viewBox="0 0 720 150" role="img" aria-label="A recession curve: flow falling off exponentially over time"></svg>
+
+    <div class="contact">
+      <a class="addr" id="addr" href="mailto:saharanmayank6@gmail.com">saharanmayank6@gmail.com</a>
+      <button class="copy" id="copy" type="button">Copy email</button>
+      <a href="https://github.com/MayankS1677" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="items">
+      <article class="item">
+        <h3>Fraud &amp; Risk Analyst, Concession Abuse Prevention</h3>
+        <p class="meta">Amazon · Hyderabad · Feb 2026 – present</p>
+        <ul>
+          <li>Investigate behavioral patterns and outliers that point to policy abuse, using Advanced Excel and internal tools.</li>
+          <li>Apply classification logic from data science to live fraud detection work.</li>
+          <li>Work across teams in Quip and Slack to improve data-driven decision workflows.</li>
+          <li>Cut personal Average Handle Time by 23% in the move from training to live production.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <h3>Customer Experience Analyst</h3>
+        <p class="meta">Sitel India · Hyderabad · Dec 2025 – Feb 2026</p>
+        <ul>
+          <li>Analyzed AHT, CSAT and FCR to improve service efficiency and found workflow gaps in customer interactions.</li>
+          <li>Ranked top performer in the training batch with a 93.8% final assessment score.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <h3>Intern, early team member</h3>
+        <p class="meta">Marketing House (M&amp;M) · Madhapur · Aug – Oct 2025</p>
+        <ul>
+          <li>Reworked client funneling workflows to improve lead conversion.</li>
+          <li>Tracked campaign KPIs and operational metrics in Advanced Excel and Google Workspace.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects &amp; research</h2>
+    <div class="items">
+      <article class="item">
+        <h3>Recession Flow Dynamics in Karst Basins under Anthropogenic Influences</h3>
+        <p class="meta">Co-author · 9th International Electronic Conference on Water Sciences</p>
+        <p>Published research on how flow recedes in karst basins and how human activity changes it.</p>
+      </article>
+      <article class="item">
+        <h3>EMG-Based Prosthetic Arm</h3>
+        <p class="meta">In development · Python, SVM</p>
+        <p>A machine learning system that reads electromyography signals to predict motor intent in real time.</p>
+      </article>
+      <article class="item">
+        <h3>Mississippi River Basin Pollution Analysis</h3>
+        <p class="meta">QGIS · Spatial analysis</p>
+        <p>Spatial analysis of how pollution from multiple points affects the water system.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>Python (NumPy, pandas, matplotlib, scikit-learn), Java, SQL</dd></div>
+      <div><dt>Tools</dt><dd>QGIS, Advanced Excel, Google Workspace</dd></div>
+      <div><dt>Concepts</dt><dd>Machine learning (SVM), data structures, algorithms (A*, BFS)</dd></div>
+      <div><dt>Domains</dt><dd>Data science, hydrological modelling, spatial analysis</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="items">
+      <article class="item">
+        <h3>B.Sc. Data Science &amp; Business Analytics</h3>
+        <p class="meta">Golden Gate University, San Francisco · 2024 – 2025 · GPA 3.7 / 4.0</p>
+      </article>
+      <article class="item">
+        <h3>Class XII (CBSE), PCM + CS</h3>
+        <p class="meta">Kendriya Vidyalaya Hanumangarh · 2024 · 72%</p>
+      </article>
+      <article class="item">
+        <h3>Class X</h3>
+        <p class="meta">Little Flower Convent School · 2022 · 80%</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Beyond work</h2>
+    <div class="items">
+      <article class="item">
+        <p>National level rifle shooter. Built a maze-solving robot using A* and BFS.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>Mayank Saharan · Rajasthan / Hyderabad, India</footer>
+</main>
+
+<script>
+(function () {
+  // Recession limb: Q(t) = Q0 * exp(-k t), drawn to one scale across the plot box.
+  var svg = document.getElementById('curve');
+  var L = 36, R = 700, T = 14, B = 116, k = 3.4, pts = [];
+  for (var j = 0; j <= 80; j++) {
+    var u = j / 80;
+    var q = Math.exp(-k * u);
+    pts.push([L + u * (R - L), B - q * (B - T)]);
+  }
+  var d = pts.map(function (p, n) { return (n ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ');
+  var area = d + ' L' + R + ' ' + B + ' L' + L + ' ' + B + ' Z';
+  svg.innerHTML =
+    '<path class="area" d="' + area + '"/>' +
+    '<path class="axis" d="M' + L + ' ' + T + ' V' + B + ' H' + R + '"/>' +
+    '<path class="line" d="' + d + '"/>' +
+    '<text x="' + L + '" y="' + (B + 20) + '">t</text>' +
+    '<text x="' + (L + 8) + '" y="' + (T + 8) + '">Q</text>' +
+    '<text x="' + R + '" y="' + (B + 20) + '" text-anchor="end">Q(t) = Q₀ · e^(−kt)   recession limb</text>';
+
+  var btn = document.getElementById('copy');
+  var addr = document.getElementById('addr');
+  btn.addEventListener('click', function () {
+    var text = addr.textContent.trim();
+    function fallback() {
+      var r = document.createRange();
+      r.selectNodeContents(addr);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy email'; }, 1800);
+      }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
